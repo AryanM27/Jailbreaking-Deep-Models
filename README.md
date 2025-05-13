@@ -18,7 +18,8 @@ We also evaluated the transferability of these attacks to **DenseNet-121**, **Ef
 
 - `DL_Project3_Final.ipynb` – Main notebook with full implementation and visualizations.
 - `./datasets/` – Folder containing clean and adversarial test sets.
-
+- `./visualizations/` – Contains figures of adversarial examples and accuracy plots.
+- `utils.py` – Helper functions for preprocessing, visualization, and evaluation.
 
 ## 🚀 Getting Started
 
@@ -36,3 +37,45 @@ We also evaluated the transferability of these attacks to **DenseNet-121**, **Ef
 git clone https://github.com/Spandan-2002/Jailbreaking-Deep-Models.git
 cd DL_Project3
 pip install -r requirements.txt
+```
+
+### Running the Notebook
+
+Open and run all cells in `DL_Project3_Final.ipynb`:
+
+```bash
+jupyter notebook DL_Project3_Final.ipynb
+```
+
+## 📊 Results Summary
+
+| Dataset                 | ResNet-34 Top-1 | ResNet-34 Top-5 |
+|-------------------------|-----------------|-----------------|
+| Original                | 76.2%           | 94.2%           |
+| FGSM (ε = 0.02)         | 3.4%            | 21.2%           |
+| PGD (10 steps)          | 0.0%            | 1.8%            |
+| PatchPGD (32×32, tuned) | 6.4%            | 29.6%           |
+
+## 🔁 Transferability Analysis
+
+All attacks were transferred to 4 other models. Notably:
+
+- **MobileNet-V2** showed the steepest accuracy drop.
+- **ViT-L-32** was the most robust to adversarial perturbations.
+
+## 📌 Key Takeaways
+
+- Single-step **FGSM** is already effective at degrading model performance.
+- Iterative **PGD** attacks can fully collapse model accuracy.
+- Even localized **PatchPGD** attacks significantly reduce accuracy.
+- Hyperparameter tuning is critical, especially for patch-based attacks.
+
+## 📜 License & Acknowledgements
+
+This work was submitted as part of Deep Learning (Spring 2025) at NYU.  
+We acknowledge the use of ChatGPT, Grok, Perplexity, StackOverflow, and official documentation for libraries used.
+
+## 📎 Final Report
+
+For detailed methodology, attack visualizations, and evaluation breakdowns, see:  
+**`DL_Project_3.pdf`**
