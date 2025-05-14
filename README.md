@@ -51,7 +51,7 @@ Open and run all cells in `DL_Project3_Final.ipynb`:
 ```bash
 jupyter notebook DL_Project3_Final.ipynb
 ```
-### Running the Notebook
+### Adverserial Dataset
 The adverserial dataset saved in the notebook is available at: https://drive.google.com/drive/folders/1bGcPfzcW7fqCyaANRtxbbrwHTYno00PH?usp=sharing
 
 ## 📊 Results Summary
