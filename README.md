@@ -17,7 +17,6 @@ We also evaluated the transferability of these attacks to **DenseNet-121**, **Ef
 ## 📁 Structure
 
 - `DL_Project3_Final.ipynb` – Main notebook with full implementation and visualizations.
-- `./datasets/` – Folder containing clean and adversarial test sets.
 
 
 ## 🚀 Getting Started
